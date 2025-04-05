@@ -8,12 +8,13 @@ import AdminProducts from "./pages/admin-view/products";
 import AdminOrders from "./pages/admin-view/orders";
 import AdminFeatures from "./pages/admin-view/features";
 import CheckAuth from "./components/common/check-auth";
+import UnauthPage from "./pages/unauth-page";
 
 
 function App() {
 
   const isAuthenticated = false;
-  const  user = null
+  const  user = null;
  
 
   return (
@@ -44,7 +45,7 @@ function App() {
 
     </Route>
 
-    <Route
+    {/* <Route
           path="/shop"
           element={
             <CheckAuth isAuthenticated={isAuthenticated} user={user}>
@@ -59,10 +60,10 @@ function App() {
           <Route path="paypal-return" element={<PaypalReturnPage />} />
           <Route path="payment-success" element={<PaymentSuccessPage />} />
           <Route path="search" element={<SearchProducts />} />
-        </Route>
+    </Route> */}
         <Route path="/unauth-page" element={<UnauthPage />} />
-        <Route path="*" element={<NotFound />} />
-        
+        {/* <Route path="*" element={<NotFound />} /> */}
+
   </Routes>
       
 
